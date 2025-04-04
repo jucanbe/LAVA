@@ -1,0 +1,61 @@
+<rdf:RDF xmlns="http://example.org/healthcare#"
+         xml:base="http://example.org/healthcare"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+  <owl:Ontology rdf:about="http://example.org/healthcare">
+    <rdfs:comment>A healthcare domain ontology defining patients, conditions, and doctors.</rdfs:comment>
+  </owl:Ontology>
+
+  <!-- Classes -->
+  <owl:Class rdf:about="#Patient"/>
+  <owl:Class rdf:about="#Condition"/>
+  <owl:Class rdf:about="#Doctor"/>
+
+  <!-- Data Properties -->
+  <owl:DatatypeProperty rdf:about="#patientName">
+    <rdfs:domain rdf:resource="#Patient"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment>Name of the patient</rdfs:comment>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="#age">
+    <rdfs:domain rdf:resource="#Patient"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:comment>Age of the patient</rdfs:comment>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="#gender">
+    <rdfs:domain rdf:resource="#Patient"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment>Gender of the patient</rdfs:comment>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="#conditionName">
+    <rdfs:domain rdf:resource="#Condition"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment>Name of the condition</rdfs:comment>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="#specialty">
+    <rdfs:domain rdf:resource="#Doctor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment>Specialty of the doctor</rdfs:comment>
+  </owl:DatatypeProperty>
+
+  <!-- Object Properties -->
+  <owl:ObjectProperty rdf:about="#hasCondition">
+    <rdfs:domain rdf:resource="#Patient"/>
+    <rdfs:range rdf:resource="#Condition"/>
+    <rdfs:comment>Patient has a condition</rdfs:comment>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="#treats">
+    <rdfs:domain rdf:resource="#Doctor"/>
+    <rdfs:range rdf:resource="#Patient"/>
+    <rdfs:comment>Doctor treats a patient</rdfs:comment>
+  </owl:ObjectProperty>
+
+</rdf:RDF>
