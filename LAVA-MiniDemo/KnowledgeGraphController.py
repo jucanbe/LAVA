@@ -1,8 +1,11 @@
 from rdflib import Graph, Namespace, URIRef, Literal, RDF
 import os
+import re
 
 def make_uri(entity_name):
-    return URIRef(f"http://example.org/entity/{entity_name.lower()}")
+    tokens = re.findall(r"[a-zA-Z0-9]+", entity_name)
+    clean_name = tokens[0].lower() + ''.join(t.capitalize() for t in tokens[1:])
+    return URIRef(f"http://example.org/entity/{clean_name}")
 
 def store_ner_re_in_rdf(entities, relations, output_file="knowledge_graph.ttl"):
     g = Graph()

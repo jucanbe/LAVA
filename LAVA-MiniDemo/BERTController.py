@@ -3,6 +3,10 @@ from transformers import pipeline
 import torch
 import itertools
 from KnowledgeGraphController import store_ner_re_in_rdf
+from Utils import print_entities_and_relations
+from nltk.tokenize import sent_tokenize
+import nltk
+nltk.download("punkt")
 
 ner_tokenizer = AutoTokenizer.from_pretrained("models/NER/tokenizer")
 ner_model = AutoModelForTokenClassification.from_pretrained("models/NER/model")
@@ -64,4 +68,31 @@ def process_text(text, id2label, output_file="knowledge_graph.ttl"):
         label = predict_relation(marked_text, re_tokenizer, re_model, id2label)
         relations.append((e1, e2, label))
     store_ner_re_in_rdf(entities, relations, output_file)
+    print_entities_and_relations(entities, relations)
     return entities, relations, output_file
+
+def process_paragraph_by_index(indices, filepath="Text/test.dat", id2label=None):
+    if id2label is None:
+        raise ValueError("You must provide the id2label dictionary.")
+
+    if isinstance(indices, int):
+        indices = [indices]
+
+    with open(filepath, "r", encoding="utf-8") as f:
+        paragraphs = [line.strip() for line in f if line.strip()]
+
+    max_index = len(paragraphs) - 1
+    for index in indices:
+        if index < 0 or index > max_index:
+            print(f"Invalid index {index}. File has {len(paragraphs)} paragraphs.")
+            continue
+
+        paragraph = paragraphs[index]
+        print(f"\nParagraph {index}:\n{paragraph}\n")
+
+        sentences = sent_tokenize(paragraph)
+
+        for i, sentence in enumerate(sentences):
+            print(f"--Sentence {i+1}:\n{sentence}")
+            entities, relations, graph_file = process_text(sentence, id2label, output_file="knowledge_graph.ttl")
+            print_entities_and_relations(entities, relations)

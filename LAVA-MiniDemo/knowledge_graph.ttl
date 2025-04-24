@@ -4,18 +4,236 @@
     ex:Negative_Correlation <http://example.org/entity/fever> ;
     ex:label "aspirins" .
 
+<http://example.org/entity/branch> a ex:Disease ;
+    ex:Association <http://example.org/entity/acuteRetinalNecrosisSyndrome>,
+        <http://example.org/entity/multifocalChoroiditis>,
+        <http://example.org/entity/ocularHistoplasmosisSyndrome>,
+        <http://example.org/entity/panuveitis>,
+        <http://example.org/entity/retinalArterialObstruction>,
+        <http://example.org/entity/toxoplasmosisRetinitis>,
+        <http://example.org/entity/vitiliginousChorioretinitis> ;
+    ex:label "branch" .
+
+<http://example.org/entity/branchRetinalArteryObstruction> a ex:Disease ;
+    ex:Positive_Correlation <http://example.org/entity/large>,
+        <http://example.org/entity/nonHodgkinSLymphoma> ;
+    ex:label "branch retinal artery obstruction" .
+
+<http://example.org/entity/buccalSpaceAbscesses> a ex:Disease ;
+    ex:Positive_Correlation <http://example.org/entity/crohnSDisease> ;
+    ex:label "buccal space abscesses" .
+
+<http://example.org/entity/chorioretinalScars> a ex:Disease ;
+    ex:label "chorioretinal scars" .
+
+<http://example.org/entity/corticosteroids> a ex:Chemical ;
+    ex:label "corticosteroids" .
+
+<http://example.org/entity/idiopathicFacialParalysis> a ex:Disease ;
+    ex:Positive_Correlation <http://example.org/entity/bellSPalsy> ;
+    ex:label "idiopathic facial paralysis" .
+
+<http://example.org/entity/lymphoma> a ex:Disease ;
+    ex:Association <http://example.org/entity/atheromas> ;
+    ex:label "lymphoma" .
+
+<http://example.org/entity/lymphomatous> a ex:Disease ;
+    ex:Positive_Correlation <http://example.org/entity/necrosisOfTheRetinaAndOpticNerve> ;
+    ex:label "lymphomatous" .
+
+<http://example.org/entity/morphine> a ex:Chemical ;
+    ex:label "morphine" .
+
+<http://example.org/entity/morphineSulfate> a ex:Chemical ;
+    ex:Cotreatment <http://example.org/entity/itms> ;
+    ex:label "morphine sulfate" .
+
+<http://example.org/entity/opioid> a ex:Chemical ;
+    ex:Association <http://example.org/entity/ics> ;
+    ex:label "opioid" .
+
+<http://example.org/entity/patients> a ex:Organism ;
+    ex:label "patients" .
+
+<http://example.org/entity/retinalArteryObstruction> a ex:Disease ;
+    ex:Association <http://example.org/entity/atheromas>,
+        <http://example.org/entity/nonHodgkinSLargeCellLymphoma>,
+        <http://example.org/entity/reticulumCellSarcoma> ;
+    ex:label "retinal artery obstruction" .
+
+<http://example.org/entity/steroid> a ex:Chemical ;
+    ex:Negative_Correlation <http://example.org/entity/inflammatoryPolyp> ;
+    ex:label "steroid" .
+
+<http://example.org/entity/steroids> a ex:Chemical ;
+    ex:Negative_Correlation <http://example.org/entity/endobronchialPolyp>,
+        <http://example.org/entity/inflammatory> ;
+    ex:label "steroids" .
+
 <http://example.org/entity/tp53> a ex:Gene ;
     ex:Association <http://example.org/entity/cancer> ;
     ex:Positive_Correlation <http://example.org/entity/mdm2> ;
     ex:label "tp53" .
 
+<http://example.org/entity/unilateral> a ex:Disease ;
+    ex:Positive_Correlation <http://example.org/entity/facialWeakness> ;
+    ex:label "unilateral" .
+
+<http://example.org/entity/unilateralFacialWeakness> a ex:Disease ;
+    ex:label "unilateral facial weakness" .
+
+<http://example.org/entity/visualLoss> a ex:Disease ;
+    ex:Association <http://example.org/entity/retina> ;
+    ex:Positive_Correlation <http://example.org/entity/tina> ;
+    ex:label "visual loss" .
+
+<http://example.org/entity/bellSPalsy> a ex:Disease ;
+    ex:label "bell ' s palsy" .
+
+<http://example.org/entity/crohnSDisease> a ex:Disease ;
+    ex:Positive_Correlation <http://example.org/entity/facialAbscesses> ;
+    ex:label "crohn ' s disease" .
+
+<http://example.org/entity/encainide> a ex:Chemical ;
+    ex:Comparison <http://example.org/entity/flecainide> ;
+    ex:Negative_Correlation <http://example.org/entity/supraventricularArrhythmias> ;
+    ex:Positive_Correlation <http://example.org/entity/arrhythmia>,
+        <http://example.org/entity/hmias>,
+        <http://example.org/entity/ventricularAr> ;
+    ex:label "encainide" .
+
+<http://example.org/entity/encainideFlecainide> a ex:Chemical ;
+    ex:Positive_Correlation <http://example.org/entity/deaths> ;
+    ex:label "encainide-flecainide" .
+
+<http://example.org/entity/facialAbscesses> a ex:Disease ;
+    ex:label "facial abscesses" .
+
+<http://example.org/entity/facialWeakness> a ex:Disease ;
+    ex:label "facial weakness" .
+
 <http://example.org/entity/fever> a ex:Disease ;
     ex:label "fever" .
+
+<http://example.org/entity/flecainide> a ex:Chemical ;
+    ex:Comparison <http://example.org/entity/encainide> ;
+    ex:Negative_Correlation <http://example.org/entity/supraventricularArrhythmias> ;
+    ex:Positive_Correlation <http://example.org/entity/arrhythmia>,
+        <http://example.org/entity/hmias>,
+        <http://example.org/entity/ventricularAr> ;
+    ex:label "flecainide" .
+
+<http://example.org/entity/ics> a ex:Chemical ;
+    ex:label "##ics" .
+
+<http://example.org/entity/inflammatory> a ex:Disease ;
+    ex:Association <http://example.org/entity/endobronchialPolyp> ;
+    ex:label "inflammatory" .
+
+<http://example.org/entity/inflammatoryPolyp> a ex:Disease ;
+    ex:label "inflammatory polyp" .
+
+<http://example.org/entity/large> a ex:Disease ;
+    ex:Association <http://example.org/entity/nonHodgkinSLymphoma> ;
+    ex:label "large" .
 
 <http://example.org/entity/mdm2> a ex:Gene ;
     ex:Association <http://example.org/entity/cancer> ;
     ex:label "mdm2" .
 
+<http://example.org/entity/necrosisOfTheRetinaAndOpticNerve> a ex:Disease ;
+    ex:label "necrosis of the retina and optic nerve" .
+
+<http://example.org/entity/retinalArterialObstruction> a ex:Disease ;
+    ex:Association <http://example.org/entity/acuteRetinalNecrosisSyndrome>,
+        <http://example.org/entity/ocularHistoplasmosisSyndrome> ;
+    ex:Positive_Correlation <http://example.org/entity/multifocalChoroiditis>,
+        <http://example.org/entity/panuveitis>,
+        <http://example.org/entity/toxoplasmosisRetinitis>,
+        <http://example.org/entity/vitiliginousChorioretinitis> ;
+    ex:label "retinal arterial obstruction" .
+
+<http://example.org/entity/tina> a ex:Chemical ;
+    ex:Positive_Correlation <http://example.org/entity/retina> ;
+    ex:label "##tina" .
+
+<http://example.org/entity/arrhythmia> a ex:Disease ;
+    ex:label "arrhythmia" .
+
+<http://example.org/entity/atheromas> a ex:Disease ;
+    ex:Association <http://example.org/entity/nonHodgkinSLargeCellLymphoma>,
+        <http://example.org/entity/reticulumCellSarcoma> ;
+    ex:label "atheromas" .
+
 <http://example.org/entity/cancer> a ex:Disease ;
     ex:label "cancer" .
+
+<http://example.org/entity/deaths> a ex:Disease ;
+    ex:Positive_Correlation <http://example.org/entity/deaths>,
+        <http://example.org/entity/encainideFlecainide> ;
+    ex:label "deaths" .
+
+<http://example.org/entity/endobronchialPolyp> a ex:Disease ;
+    ex:label "endobronchial polyp" .
+
+<http://example.org/entity/itms> a ex:Chemical,
+        ex:Disease ;
+    ex:Positive_Correlation <http://example.org/entity/itms> ;
+    ex:label "itms" .
+
+<http://example.org/entity/nonHodgkinSLargeCellLymphoma> a ex:Disease ;
+    ex:Positive_Correlation <http://example.org/entity/reticulumCellSarcoma> ;
+    ex:label "non-hodgkin ' s large cell lymphoma" .
+
+<http://example.org/entity/nonHodgkinSLymphoma> a ex:Disease ;
+    ex:label "non-hodgkin ' s lymphoma" .
+
+<http://example.org/entity/retina> a ex:Chemical ;
+    ex:label "retina" .
+
+<http://example.org/entity/supraventricularArrhythmias> a ex:Disease ;
+    ex:label "supraventricular arrhythmias" .
+
+<http://example.org/entity/toxoplasmosisRetinitis> a ex:Disease ;
+    ex:Positive_Correlation <http://example.org/entity/acuteRetinalNecrosisSyndrome>,
+        <http://example.org/entity/multifocalChoroiditis>,
+        <http://example.org/entity/ocularHistoplasmosisSyndrome>,
+        <http://example.org/entity/panuveitis>,
+        <http://example.org/entity/vitiliginousChorioretinitis> ;
+    ex:label "toxoplasmosis retinitis" .
+
+<http://example.org/entity/ventricularAr> a ex:Disease ;
+    ex:Positive_Correlation <http://example.org/entity/hmias> ;
+    ex:label "ventricular ar" .
+
+<http://example.org/entity/hmias> a ex:Disease ;
+    ex:label "##hmias" .
+
+<http://example.org/entity/multifocalChoroiditis> a ex:Disease ;
+    ex:Positive_Correlation <http://example.org/entity/acuteRetinalNecrosisSyndrome>,
+        <http://example.org/entity/ocularHistoplasmosisSyndrome>,
+        <http://example.org/entity/panuveitis>,
+        <http://example.org/entity/vitiliginousChorioretinitis> ;
+    ex:label "multifocal choroiditis" .
+
+<http://example.org/entity/reticulumCellSarcoma> a ex:Disease ;
+    ex:label "reticulum cell sarcoma" .
+
+<http://example.org/entity/panuveitis> a ex:Disease ;
+    ex:Positive_Correlation <http://example.org/entity/acuteRetinalNecrosisSyndrome>,
+        <http://example.org/entity/ocularHistoplasmosisSyndrome>,
+        <http://example.org/entity/vitiliginousChorioretinitis> ;
+    ex:label "panuveitis" .
+
+<http://example.org/entity/ocularHistoplasmosisSyndrome> a ex:Disease ;
+    ex:Positive_Correlation <http://example.org/entity/acuteRetinalNecrosisSyndrome>,
+        <http://example.org/entity/vitiliginousChorioretinitis> ;
+    ex:label "ocular histoplasmosis syndrome" .
+
+<http://example.org/entity/vitiliginousChorioretinitis> a ex:Disease ;
+    ex:Positive_Correlation <http://example.org/entity/acuteRetinalNecrosisSyndrome> ;
+    ex:label "vitiliginous chorioretinitis" .
+
+<http://example.org/entity/acuteRetinalNecrosisSyndrome> a ex:Disease ;
+    ex:label "acute retinal necrosis syndrome" .
 
