@@ -1,0 +1,21 @@
+@prefix ex: <http://example.org/> .
+
+<http://example.org/entity/aspirins> a ex:Chemical ;
+    ex:Negative_Correlation <http://example.org/entity/fever> ;
+    ex:label "aspirins" .
+
+<http://example.org/entity/tp53> a ex:Gene ;
+    ex:Association <http://example.org/entity/cancer> ;
+    ex:Positive_Correlation <http://example.org/entity/mdm2> ;
+    ex:label "tp53" .
+
+<http://example.org/entity/fever> a ex:Disease ;
+    ex:label "fever" .
+
+<http://example.org/entity/mdm2> a ex:Gene ;
+    ex:Association <http://example.org/entity/cancer> ;
+    ex:label "mdm2" .
+
+<http://example.org/entity/cancer> a ex:Disease ;
+    ex:label "cancer" .
+
